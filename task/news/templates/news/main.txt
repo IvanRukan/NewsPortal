@@ -1,0 +1,13 @@
+<h2>Hyper news</h2>  
+  
+  {% for key, value in articles.items %}
+    <h4>{{ key }}</h4>
+<ul>
+    {% for story in value %}
+      
+        <li><a href="/news/{{ story.0  }}/">{{ story.1 }}</a></li>
+      
+    {% endfor %}
+</ul>
+  {% endfor %}
+<a target="_blank" href="/news/create/">Create your story!</a>

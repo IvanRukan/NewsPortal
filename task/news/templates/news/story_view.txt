@@ -1,0 +1,4 @@
+<h2>{{ title }}</h2>
+<p>{{ date }}</p>
+<p>{{ text }}</p>
+<a target="_blank" href="/news/">To news</a> 

@@ -1,0 +1,16 @@
+<h2>Hyper news</h2>  
+  
+  {% for key, value in articles.items %}
+    <h4>{{ key }}</h4>
+<ul>
+    {% for story in value %}
+      
+        <li><a href="/news/{{ story.0  }}/">{{ story.1 }}</a></li>
+      
+    {% endfor %}
+</ul>
+  {% endfor %}
+<form action="/news/" method="get">{% csrf_token %}
+	<input type="text" name="q">
+	<button type="submit">Search</button>
+<a target="_blank" href="/news/create/">Create your story!</a>
